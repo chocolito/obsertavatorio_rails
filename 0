@@ -1,0 +1,8 @@
+Plural version of the model detected, using singularized version. Override with --force-plural.
+      invoke  active_record
+   identical    db/migrate/20141201025646_create_compania.rb
+   identical    app/models/compania.rb
+      invoke    test_unit
+   identical      test/models/compania_test.rb
+    conflict      test/fixtures/compania.yml
+    Overwrite /home/pablo/proyecto_bdd/obsertavatorio_rails/test/fixtures/compan[Kiia.yml? (enter "h" for help) [Ynaqdh] asdas

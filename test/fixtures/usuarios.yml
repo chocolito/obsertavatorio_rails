@@ -2,10 +2,12 @@
 
 one:
   nombre: MyString
-  cuenta: MyString
-  idLocal: 1
+  nick: MyString
+  id_t: 1
+  id_local: 
 
 two:
   nombre: MyString
-  cuenta: MyString
-  idLocal: 1
+  nick: MyString
+  id_t: 1
+  id_local: 

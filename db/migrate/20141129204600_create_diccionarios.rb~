@@ -1,0 +1,9 @@
+class CreateDiccionarios < ActiveRecord::Migration
+  def change
+    create_table :diccionario do |t|
+      t.string :termino
+
+      t.timestamps
+    end
+  end
+end

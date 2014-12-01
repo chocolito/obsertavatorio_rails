@@ -1,0 +1,10 @@
+class CreateUsuarioTweets < ActiveRecord::Migration
+  def change
+    create_table :usuario_tweets do |t|
+      t.id :tweet
+      t.id :usuario
+
+      t.timestamps
+    end
+  end
+end

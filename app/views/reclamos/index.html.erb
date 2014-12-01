@@ -1,42 +1,31 @@
-<%- model_class = Reclamo -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
+<h1>Listing reclamos</h1>
+
+<table>
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:idTweet) %></th>
-      <th><%= model_class.human_attribute_name(:idCompania) %></th>
-      <th><%= model_class.human_attribute_name(:tipo) %></th>
-      <th><%= model_class.human_attribute_name(:servicio) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>Tweet</th>
+      <th>Compania</th>
+      <th>Tipo</th>
+      <th>Servicio</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
+
   <tbody>
     <% @reclamos.each do |reclamo| %>
       <tr>
-        <td><%= link_to reclamo.id, reclamo_path(reclamo) %></td>
-        <td><%= reclamo.idTweet %></td>
-        <td><%= reclamo.idCompania %></td>
+        <td><%= reclamo.tweet %></td>
+        <td><%= reclamo.compania %></td>
         <td><%= reclamo.tipo %></td>
         <td><%= reclamo.servicio %></td>
-        <td><%=l reclamo.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_reclamo_path(reclamo), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      reclamo_path(reclamo),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
+        <td><%= link_to 'Show', reclamo %></td>
+        <td><%= link_to 'Edit', edit_reclamo_path(reclamo) %></td>
+        <td><%= link_to 'Destroy', reclamo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_reclamo_path,
-            :class => 'btn btn-primary' %>
+<br>
+
+<%= link_to 'New Reclamo', new_reclamo_path %>

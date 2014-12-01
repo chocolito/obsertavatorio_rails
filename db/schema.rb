@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129205348) do
+ActiveRecord::Schema.define(version: 20141201032446) do
+
+  create_table "compania", force: true do |t|
+    t.string   "nombre"
+    t.integer  "cuenta"
+    t.string   "twit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "diccionarios", force: true do |t|
-    t.string   "terminos"
+    t.string   "termino"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,17 +40,22 @@ ActiveRecord::Schema.define(version: 20141129205348) do
     t.datetime "updated_at"
   end
 
-  create_table "locals", force: true do |t|
-    t.string   "region"
+  create_table "reclamos", force: true do |t|
+    t.integer  "tweet"
+    t.integer  "idTweet"
+    t.integer  "compania"
+    t.integer  "idCompania"
+    t.string   "tipo"
+    t.string   "servicio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "reclamos", force: true do |t|
+  create_table "tweet_filtros", force: true do |t|
+    t.integer  "filtro"
+    t.integer  "idFiltro"
+    t.integer  "tweet"
     t.integer  "idTweet"
-    t.integer  "idCompania"
-    t.string   "tipo"
-    t.string   "servicio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -54,10 +67,30 @@ ActiveRecord::Schema.define(version: 20141129205348) do
     t.datetime "updated_at"
   end
 
+  create_table "twwet_diccionario", force: true do |t|
+    t.integer  "diccionario"
+    t.integer  "idDiccionario"
+    t.integer  "tweet"
+    t.integer  "idTweet"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuario_tweets", force: true do |t|
+    t.integer  "tweet"
+    t.integer  "idTweet"
+    t.integer  "usuarios"
+    t.integer  "idUsuarios"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "usuarios", force: true do |t|
     t.string   "nombre"
-    t.string   "cuenta"
-    t.integer  "idLocal"
+    t.string   "nick"
+    t.integer  "id_t"
+    t.integer  "localizacions"
+    t.integer  "id_local"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

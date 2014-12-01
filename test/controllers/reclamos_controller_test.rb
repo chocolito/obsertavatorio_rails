@@ -18,7 +18,7 @@ class ReclamosControllerTest < ActionController::TestCase
 
   test "should create reclamo" do
     assert_difference('Reclamo.count') do
-      post :create, reclamo: { idCompania: @reclamo.idCompania, idTweet: @reclamo.idTweet, servicio: @reclamo.servicio, tipo: @reclamo.tipo }
+      post :create, reclamo: { compania: @reclamo.compania, servicio: @reclamo.servicio, tipo: @reclamo.tipo, tweet: @reclamo.tweet }
     end
 
     assert_redirected_to reclamo_path(assigns(:reclamo))
@@ -35,7 +35,7 @@ class ReclamosControllerTest < ActionController::TestCase
   end
 
   test "should update reclamo" do
-    patch :update, id: @reclamo, reclamo: { idCompania: @reclamo.idCompania, idTweet: @reclamo.idTweet, servicio: @reclamo.servicio, tipo: @reclamo.tipo }
+    patch :update, id: @reclamo, reclamo: { compania: @reclamo.compania, servicio: @reclamo.servicio, tipo: @reclamo.tipo, tweet: @reclamo.tweet }
     assert_redirected_to reclamo_path(assigns(:reclamo))
   end
 

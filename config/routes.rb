@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :compania
+
   resources :localizacions
 
   resources :locals

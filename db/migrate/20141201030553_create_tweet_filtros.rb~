@@ -1,0 +1,10 @@
+class CreateTweetFiltros < ActiveRecord::Migration
+  def change
+    create_table :tweet_filtros do |t|
+      t. :filtro
+      t.idTweet :tweet
+
+      t.timestamps
+    end
+  end
+end

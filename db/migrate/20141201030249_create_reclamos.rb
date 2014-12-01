@@ -1,8 +1,8 @@
 class CreateReclamos < ActiveRecord::Migration
   def change
     create_table :reclamos do |t|
-      t.integer :idTweet
-      t.integer :idCompania
+      t.integer :tweet,:idTweet
+      t.integer :compania,:idCompania
       t.string :tipo
       t.string :servicio
 
