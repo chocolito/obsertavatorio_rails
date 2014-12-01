@@ -40,6 +40,6 @@ class UsuariosController < ApplicationController
     end
 
     def usuario_params
-      params.require(:usuario).permit(:nombre, :nick, :id_t, :id_local)
+      params.require(:usuario).permit(:cuenta, :nombre, :id_t, :id_local)
     end
 end

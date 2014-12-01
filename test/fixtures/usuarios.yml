@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  cuenta: MyString
   nombre: MyString
-  nick: MyString
   id_t: 1
   id_local: 
 
 two:
+  cuenta: MyString
   nombre: MyString
-  nick: MyString
   id_t: 1
   id_local: 

@@ -1,10 +1,10 @@
 class CreateUsuarios < ActiveRecord::Migration
   def change
     create_table :usuarios do |t|
+      t.string :cuenta
       t.string :nombre
-      t.string :nick
       t.integer :id_t
-      t.integer :localizacions,:id_local
+      t.localizacions :id_local
 
       t.timestamps
     end
